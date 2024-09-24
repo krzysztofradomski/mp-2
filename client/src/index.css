@@ -1,0 +1,262 @@
+/* App.css */
+
+/* General styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Join Screen */
+.join-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-join {
+  margin-bottom: 20px;
+}
+
+.player-join input {
+  padding: 10px;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  width: 250px;
+  max-width: 100%;
+}
+
+.player-join button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Game Screen */
+.game-screen {
+  width: 100%;
+  max-width: 600px;
+}
+
+.player-info {
+  color: blue;
+}
+
+.opponent-info {
+  color: red;
+}
+
+.player-info,
+.opponent-info {
+  display: inline-block;
+  width: 48%;
+  text-align: center;
+}
+
+.player-info h2,
+.opponent-info h2 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.player-info h4,
+.opponent-info h4 {
+  margin-bottom: 5px;
+}
+
+.player-info p,
+.opponent-info p {
+  font-size: 1.2em;
+}
+
+.timer {
+  position: relative;
+  height: 20px;
+  background-color: #ddd;
+  margin: 20px 20px 0 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.timer-countdown {
+  color: blue;
+  margin: 10px auto 0 auto;
+  width: 60px;
+}
+
+.timer-bar {
+  height: 100%;
+  background-image: linear-gradient(to right, red, yellow, green, blue, orange);
+  transition: width 1s linear;
+}
+
+.boards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(4, 60px);
+  gap: 5px;
+  margin: 10px;
+}
+
+.board .cell {
+  width: 60px;
+  height: 60px;
+  background-color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.board .cell.red {
+  background-color: #ff4d4d;
+}
+
+.board .cell.green {
+  background-color: #4dff4d;
+}
+
+.board .cell.yellow {
+  background-color: #ffff66;
+}
+
+.board .cell.blue {
+  background-color: #4d4dff;
+}
+
+.board .cell.orange {
+  background-color: #ffa500;
+}
+
+.own-board {
+  border: 5px solid blue;
+  padding: 5px;
+}
+
+.opponent-board {
+  border: 5px solid red;
+  padding: 5px;
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.result-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 40px;
+  font-size: 2em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .player-info,
+  .opponent-info {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .boards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .board {
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, 50px);
+  }
+
+  .board .cell {
+    width: 50px;
+    height: 50px;
+  }
+
+  .timer {
+    width: calc(40% - 20px);
+    min-width: 175px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .board {
+    grid-template-columns: repeat(4, 40px);
+    grid-template-rows: repeat(4, 40px);
+  }
+
+  .board .cell {
+    width: 40px;
+    height: 40px;
+  }
+
+  .join-screen input,
+  .join-screen button {
+    width: 90%;
+    font-size: 1em;
+  }
+}
+
+/* App.css */
+
+/* ... [previous CSS code remains the same] ... */
+
+/* Start Game Button */
+.start-game-button {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.start-game-button button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.result-popup {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 40px;
+  font-size: 2em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cell.valid-drop {
+  outline: 2px dashed green;
+}
+
+.cell.invalid-drop {
+  outline: 2px dashed red;
+}

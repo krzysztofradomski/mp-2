@@ -1,0 +1,27 @@
+{
+  "name": "game-test-alt-server",
+  "version": "1.0.0",
+  "description": "one evening project",
+  "private": true,
+  "author": "krzysztof_radomski@icloud.com",
+  "license": "UNLICENSED",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "start": "node dist/src/server.js",
+    "dev": "nodemon src/server.ts"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "nodemon": "^3.1.4",
+    "socket.io": "^4.8.0",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.6.1",
+    "@types/socket.io": "^3.0.2",
+    "typescript": "^5.6.2"
+  }
+}
