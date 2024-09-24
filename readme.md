@@ -1,21 +1,21 @@
-# Multiplayer Test Game - React + Socket.io, alt take
+### Multiplayer Test Game - React + Socket.io, alt take
 
-### estimated time: one evening, ~ 5h
+estimated time: one evening, ~ 5h
 
-# HOWTO:
+#### HOWTO:
 
-# run `npm install && npm run dev` in both `client` and `server` directories
+#### run `npm install && npm run dev` in both `client` and `server` directories
 
-# OR
+#### OR
 
-# run `npm install && npm run build && npm run start` in both `client` and `server` directories
+#### run `npm install && npm run build && npm run start` in both `client` and `server` directories
 
-# OR
+#### OR
 
-# build and run the `Dockerfile`s in both `client` and `server` directories
+#### build and run the `Dockerfile`s in both `client` and `server` directories
 
-# OR
+#### OR
 
-# go to this [url](https://mp-2-static.onrender.com/) - free tier, slow start up if pod is sleeping
+#### go to this [url](https://mp-2-static.onrender.com/) - free tier, slow start up if pod is sleeping
 
 ![alt text](image-render.png)
