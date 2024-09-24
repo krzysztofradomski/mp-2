@@ -1,8 +1,5 @@
 import io from "socket.io-client";
 
-const PORT = process.env.PORT || 4000;
-const baseUrl = window.location.origin.includes("localhost")
-  ? "http://localhost"
-  : "https://server-bold-darkness-3069.fly.dev";
+const socketUrl = process.env.SOCKET_URL || "http://localhost:4000";
 
-export const socket = io(`${baseUrl}:${PORT}`);
+export const socket = io(socketUrl);
